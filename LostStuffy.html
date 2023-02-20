@@ -1,7 +1,7 @@
 <body><script language="decker">
 {deck}
 version:1
-card:0
+card:19
 size:[512,342]
 name:"LostStuffy.html"
 
@@ -27,13 +27,13 @@ Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"cente
 
 {script:Kid Room.0}
 on click do
-  go["Check Bed"]
+  go["Check Bed - Kid Room"]
 end
 {end}
 
 {script:Kid Room.1}
 on click do
-  go["Check Dresser"]
+  go["Check Dresser - Kid Room"]
 end
 {end}
 
@@ -45,16 +45,16 @@ end
 
 {script:Kid Room.3}
 on click do
-  go["Hallway"]
+  go["Hallway - Second Level"]
 end
 {end}
 
-{card:Check Bed}
+{card:Check Bed - Kid Room}
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You look through the covers of the bed you were sleeping in. \n\nUnfortunately, Lam-Lam is nowhere to be found."}
 Keep Searching:{"type":"button","size":[96,32],"pos":[384,288],"script":"Intro.0","text":"Keep Searching"}
 
-{card:Check Dresser}
+{card:Check Dresser - Kid Room}
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You walk over the to the dresser. Looking around it. You search each drawer.\n\n Nothing.\n\nYou do find a small metal key. You're not sure what it goes to."}
 Keep Searching:{"type":"button","size":[96,32],"pos":[384,288],"script":"Intro.0","text":"Keep Searching"}
@@ -69,56 +69,62 @@ Enter Kid Room:{"type":"button","size":[96,32],"pos":[128,224],"script":"Intro.0
 
 {script:Game Room.0}
 on click do
-  go["Check Table"]
+  go["Check Table - Game Room"]
 end
 {end}
 
 {script:Game Room.1}
 on click do
-  go["Check Shelves"]
+  go["Check Shelves - Game Room"]
 end
 {end}
 
-{card:Check Table}
+{card:Check Table - Game Room}
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You check the table. You see a map. The corner has a name scribbled. \"Tom Cartos\". There are little pieces on the map and sheets of paper everywhere. \n\nSadly, no Lam-Lam."}
 Back to Game Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Kid Room.2","text":"Keep Searching"}
 
-{card:Check Shelves}
+{card:Check Shelves - Game Room}
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"The shelves are cluttered with pieces of board games, books, and boxes. You search through the clutter. \n\nYou don't find Lam-Lam but you find a toy sword. Now you feel a little safer."}
 Back to Game Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Kid Room.2","text":"Keep Searching"}
 
-{card:Hallway}
+{card:Hallway - Second Level}
 {widgets}
 Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"You enter the hall. You quickly remember you are on the second floor. The hall wraps around the second floor. There is a opening in the middle of the room to show the main level. You can go to many different rooms from here."}
 Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Hallway"}
 Enter Kid Room:{"type":"button","size":[96,32],"pos":[128,160],"script":"Intro.0","text":"Kid Room"}
-Go to Main Level:{"type":"button","size":[96,32],"pos":[288,288],"text":"Stairs"}
-Enter Guest Hall:{"type":"button","size":[96,32],"pos":[288,160],"script":"Hallway.0","text":"Guest Hall"}
-Enter Parents Room:{"type":"button","size":[96,32],"pos":[128,224],"script":"Hallway.1","text":"Parents Room"}
-Enter Guest Bedroom:{"type":"button","size":[96,32],"pos":[288,224],"script":"Hallway.2","text":"Guest Bedroom"}
-Enter Balcony:{"type":"button","size":[96,32],"pos":[128,288],"script":"Hallway.3","text":"Balcony"}
+Go to Main Level:{"type":"button","size":[96,32],"pos":[288,288],"script":"Hallway - Second Level.0","text":"Stairs"}
+Enter Guest Hall:{"type":"button","size":[96,32],"pos":[288,160],"script":"Hallway - Second Level.1","text":"Guest Hall"}
+Enter Parents Room:{"type":"button","size":[96,32],"pos":[128,224],"script":"Hallway - Second Level.2","text":"Parents Room"}
+Enter Guest Bedroom:{"type":"button","size":[96,32],"pos":[288,224],"script":"Hallway - Second Level.3","text":"Guest Bedroom"}
+Enter Balcony:{"type":"button","size":[96,32],"pos":[128,288],"script":"Hallway - Second Level.4","text":"Balcony"}
 
-{script:Hallway.0}
+{script:Hallway - Second Level.0}
+on click do
+  go["Main Hall"]
+end
+{end}
+
+{script:Hallway - Second Level.1}
 on click do
   go["Guest Hall"]
 end
 {end}
 
-{script:Hallway.1}
+{script:Hallway - Second Level.2}
 on click do
   go["Parents Room"]
 end
 {end}
 
-{script:Hallway.2}
+{script:Hallway - Second Level.3}
 on click do
   go["Guest Bedroom"]
 end
 {end}
 
-{script:Hallway.3}
+{script:Hallway - Second Level.4}
 on click do
   go["Balcony"]
 end
@@ -155,35 +161,35 @@ Check Bed:{"type":"button","size":[96,32],"pos":[288,160],"script":"Guest Bedroo
 
 {script:Guest Bedroom.0}
 on click do
-  go["Bathroom - Guest Room"]
+  go["Check Bathroom - Guest Room"]
 end
 {end}
 
 {script:Guest Bedroom.1}
 on click do
-  go["Balcony - Guest Room"]
+  go["Check Balcony - Guest Room"]
 end
 {end}
 
 {script:Guest Bedroom.2}
 on click do
-  go["Bed - Guest Room"]
+  go["Check Bed - Guest Room"]
 end
 {end}
 
-{card:Bed - Guest Room}
+{card:Check Bed - Guest Room}
 {widgets}
-Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"The bed shoots dust into the air as you push back the heavy sheets. You cough a little. \n\nSadly, no Lam-Lam."}
-Back to Guest Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Hallway.2","text":"Keep Searching"}
+Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"The bed shoots dust into the air as you push back the heavy sheets. Dust Climbs up your nose, causing you to let out a little sneeze. \n\nSadly, no Lam-Lam."}
+Back to Guest Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Hallway - Second Level.3","text":"Keep Searching"}
 
-{card:Bathroom - Guest Room}
+{card:Check Bathroom - Guest Room}
 {widgets}
-Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You go into the bathroom. You check the toilet and bath tub. \n\nNo Lam-Lam here either.\n\nYou look at the mirror and smile at yourself. You draw a smiley face on the mirror. Better keep searching."}
-Back to Guest Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Hallway.2","text":"Keep Searching"}
+Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You go into the bathroom. You check the toilet and bath tub. \n\nNo Lam-Lam here either.\n\nYou draw a smiley face on the mirror. You smile at yourself. Better keep searching."}
+Back to Guest Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Hallway - Second Level.3","text":"Keep Searching"}
 
-{card:Balcony - Guest Room}
+{card:Check Balcony - Guest Room}
 {widgets}
-Back to Guest Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Hallway.2","text":"Keep Searching"}
+Back to Guest Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Hallway - Second Level.3","text":"Keep Searching"}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You go out onto the balcony. You watch the rain douse everything in sight. It is late at night. It is very dark in cold. Better not stay out too long.\n\nYou look about the balcony and can't see Lam-Lam. You spot a weird leaf. It is surprisingly dry. Guess it doesn't like the rain. "}
 
 {card:Balcony}
@@ -192,52 +198,128 @@ Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"It is ra
 Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Balcony"}
 Enter Hallway:{"type":"button","size":[96,32],"pos":[128,160],"script":"Kid Room.3","text":"Hallway"}
 
-{card:card1}
-{widgets}
-Room Description:{"type":"field","size":[384,64],"pos":[64,64]}
-Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Main Hall"}
-
 {card:Study}
 {widgets}
 Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"The study is a cozy room, even at night. There is a large wood desk with a swivel chair. There might be a few places to check here."}
 Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Study"}
-Enter Guest Hall:{"type":"button","size":[96,32],"pos":[128,160],"script":"Hallway.0","text":"Guest Hall"}
+Enter Guest Hall:{"type":"button","size":[96,32],"pos":[128,160],"script":"Hallway - Second Level.1","text":"Guest Hall"}
 Check Swivel Chair:{"type":"button","size":[96,32],"pos":[128,224],"script":"Study.0","text":"Swivel Chair"}
 Check Desk:{"type":"button","size":[96,32],"pos":[288,160],"script":"Study.1","text":"Desk"}
 Check Fire Place:{"type":"button","size":[96,32],"pos":[288,224],"script":"Study.2","text":"Fire Place"}
 
 {script:Study.0}
 on click do
-  go["Swival Chair"]
+  go["Check Swivel Chair - Study"]
 end
 {end}
 
 {script:Study.1}
 on click do
-  go["Desk"]
+  go["Check Desk - Study"]
 end
 {end}
 
 {script:Study.2}
 on click do
-  go["Fire Place"]
+  go["Check Fire Place - Study"]
 end
 {end}
 
-{card:Desk}
+{card:Check Desk - Study}
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You check the very large desk. You pull open the drawers. Nothing but papers and work stuff.\n\nAlthough Lam-Lam isn't hiding here, you do find a pom-pom pen. You love pom-pom pens."}
 Back to Study:{"type":"button","size":[96,32],"pos":[384,288],"script":"Guest Hall.0","text":"Keep Searching"}
 
-{card:Swival Chair}
+{card:Check Swivel Chair - Study}
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You sit in the swivel chair. It wouldn't hurt to spin a little right? \n\nYou spin the chair. You whirl around several times. You start to feel very very dizzy and fall off the chair.\n\nYou'll have to do that again with Lam-Lam when you find him."}
 Back to Study:{"type":"button","size":[96,32],"pos":[384,288],"script":"Guest Hall.0","text":"Keep Searching"}
 
-{card:Fire Place}
+{card:Check Fire Place - Study}
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You check the fire place. It is really big. It's a little scary when there is no fire in it. Cold and dark. You look up at the mantle but it is too high. No way Lam-Lam could get up there.\n\nGuess you better keep looking."}
 Back to Study:{"type":"button","size":[96,32],"pos":[384,288],"script":"Guest Hall.0","text":"Keep Searching"}
+
+{card:Main Hall}
+{widgets}
+Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"You carfully walk down the stairs into the Main Hall. You cling to the railing as you take small steps. The Main Hall is very big. You hear the echo of the rain pattering on the windows. There is a lonely chair and table in the room. In the middle of the stairs hangs a large painting of a man with a monicle. It always feels like he is watching you.\n\nThere are many room on the main floor. Which one should you go to?"}
+Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Main Hall"}
+Go to Second Level:{"type":"button","size":[96,32],"pos":[128,160],"script":"Kid Room.3","text":"Stairs"}
+Check Bathroom - Main Hall:{"type":"button","size":[96,32],"pos":[288,224],"text":"Bathroom"}
+Check Closet - Main Hall:{"type":"button","size":[96,32],"pos":[128,224],"text":"Closet"}
+Enter Lounge:{"type":"button","size":[96,32],"pos":[128,288],"script":"Main Hall.0","text":"Lounge"}
+Enter Library:{"type":"button","size":[96,32],"pos":[288,288],"text":"Library"}
+Enter Hallway - Main:{"type":"button","size":[96,32],"pos":[288,160],"text":"Hallway"}
+
+{script:Main Hall.0}
+on click do
+  go["Lounge"]
+end
+{end}
+
+{card:Hallway - Main Level}
+{widgets}
+Room Description:{"type":"field","size":[384,64],"pos":[64,64]}
+Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Hallway"}
+
+{card:Check Closet}
+{widgets}
+Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You open the closet door. You are met with many jackets. There are jackets of different sizes and styles. You can hardly see anything.\n\nYou reach into the closet. You can see or feel anything. You frown and whisper Lam-Lam's name. He can't be here. Guess you should check elsewhere."}
+Back to Main Hall:{"type":"button","size":[96,32],"pos":[384,288],"script":"Hallway - Second Level.0","text":"Keep Searching"}
+
+{card:Check Bathroom}
+{widgets}
+Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You walk into the bathroom. It is very clean. This one is used often. Especially if there are people over. You look around and can't even find a sinlge toy.\n\nNo Lam-Lam."}
+Back to Main Hall:{"type":"button","size":[96,32],"pos":[384,288],"script":"Hallway - Second Level.0","text":"Keep Searching"}
+
+{card:Lounge}
+{widgets}
+Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"There is a very nice couch with a coffee table. A large fireplace takes up a good part of the wall. There is a small cabinet in the corner of the room.\n\nYou don't come in here very much. You parents like to come in here with guest and drink and talk. It doesn't smell very nice. Guess you should check anyway."}
+Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Lounge"}
+Check Fire Place - Lounge:{"type":"button","size":[96,32],"pos":[288,224],"script":"Lounge.0","text":"Fire Place"}
+Check Couch - Lounge:{"type":"button","size":[96,32],"pos":[288,160],"script":"Lounge.1","text":"Couch"}
+Enter Main Hall:{"type":"button","size":[96,32],"pos":[128,160],"script":"Hallway - Second Level.0","text":"Main Hall"}
+Check Cabinet - Lounge:{"type":"button","size":[96,32],"pos":[128,224],"script":"Lounge.2","text":"Cabinet"}
+
+{script:Lounge.0}
+on click do
+  go["Check Fire Place - Lounge"]
+end
+{end}
+
+{script:Lounge.1}
+on click do
+  go["Check Couch - Lounge"]
+end
+{end}
+
+{script:Lounge.2}
+on click do
+  go["Check Cabinet - Lounge"]
+end
+{end}
+
+{card:Check Couch - Lounge}
+{widgets}
+Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You walk over to the couch. Now that you are closer, there are quite a few stains on the couch. Gross.\n\nGood thing Lam-Lam didn't choose to hide here."}
+Back to Lounge:{"type":"button","size":[96,32],"pos":[384,288],"script":"Main Hall.0","text":"Keep Searching"}
+
+{card:Check Cabinet - Lounge}
+{widgets}
+Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You open the cabinet. There are many shiny glass bottles of all different shapes and sizes. You better not touch or your parents will be mad. \n\nYou don't think Lam-Lam would like theses drinks. Lam-Lam likes milk and honey."}
+Back to Lounge:{"type":"button","size":[96,32],"pos":[384,288],"script":"Main Hall.0","text":"Keep Searching"}
+
+{card:Check Fire Place - Lounge}
+{widgets}
+Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"Like the fire place in the study upstairs, this fire place is a giant. You notice that a few logs in the fireplace are still glowing. Its really pretty.\n\nYou stare off watching the embers before you remember that Lam-Lam is not here and you still need to find him. It would be nicer to watch the fire with him."}
+Back to Lounge:{"type":"button","size":[96,32],"pos":[384,288],"script":"Main Hall.0","text":"Keep Searching"}
+
+{card:Library}
+{widgets}
+Room Description:{"type":"field","size":[384,64],"pos":[64,64]}
+Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Library"}
+
+{card:card1}
 
 </script>
 <a id='target' style='display:none'></a>
