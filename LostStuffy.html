@@ -1,7 +1,7 @@
 <body><script language="decker">
 {deck}
 version:1
-card:19
+card:24
 size:[512,342]
 name:"LostStuffy.html"
 
@@ -94,7 +94,7 @@ Back to Game Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Kid 
 Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"You enter the hall. You quickly remember you are on the second floor. The hall wraps around the second floor. There is a opening in the middle of the room to show the main level. You can go to many different rooms from here."}
 Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Hallway"}
 Enter Kid Room:{"type":"button","size":[96,32],"pos":[128,160],"script":"Intro.0","text":"Kid Room"}
-Go to Main Level:{"type":"button","size":[96,32],"pos":[288,288],"script":"Hallway - Second Level.0","text":"Stairs"}
+Go to Main Level:{"type":"button","size":[96,32],"pos":[288,288],"script":"Hallway - Second Level.0","text":"Down Stairs"}
 Enter Guest Hall:{"type":"button","size":[96,32],"pos":[288,160],"script":"Hallway - Second Level.1","text":"Guest Hall"}
 Enter Parents Room:{"type":"button","size":[96,32],"pos":[128,224],"script":"Hallway - Second Level.2","text":"Parents Room"}
 Enter Guest Bedroom:{"type":"button","size":[96,32],"pos":[288,224],"script":"Hallway - Second Level.3","text":"Guest Bedroom"}
@@ -244,30 +244,43 @@ Back to Study:{"type":"button","size":[96,32],"pos":[384,288],"script":"Guest Ha
 {widgets}
 Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"You carfully walk down the stairs into the Main Hall. You cling to the railing as you take small steps. The Main Hall is very big. You hear the echo of the rain pattering on the windows. There is a lonely chair and table in the room. In the middle of the stairs hangs a large painting of a man with a monicle. It always feels like he is watching you.\n\nThere are many room on the main floor. Which one should you go to?"}
 Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Main Hall"}
-Go to Second Level:{"type":"button","size":[96,32],"pos":[128,160],"script":"Kid Room.3","text":"Stairs"}
-Check Bathroom - Main Hall:{"type":"button","size":[96,32],"pos":[288,224],"text":"Bathroom"}
-Check Closet - Main Hall:{"type":"button","size":[96,32],"pos":[128,224],"text":"Closet"}
-Enter Lounge:{"type":"button","size":[96,32],"pos":[128,288],"script":"Main Hall.0","text":"Lounge"}
+Go to Second Level:{"type":"button","size":[96,32],"pos":[128,160],"script":"Kid Room.3","text":"Up Stairs"}
+Check Bathroom - Main Hall:{"type":"button","size":[96,32],"pos":[288,224],"script":"Main Hall.0","text":"Bathroom"}
+Check Closet - Main Hall:{"type":"button","size":[96,32],"pos":[128,224],"script":"Main Hall.1","text":"Closet"}
+Enter Lounge:{"type":"button","size":[96,32],"pos":[128,288],"script":"Main Hall.2","text":"Lounge"}
 Enter Library:{"type":"button","size":[96,32],"pos":[288,288],"text":"Library"}
-Enter Hallway - Main:{"type":"button","size":[96,32],"pos":[288,160],"text":"Hallway"}
+Enter Hallway - Main:{"type":"button","size":[96,32],"pos":[288,160],"script":"Main Hall.3","text":"Hallway"}
 
 {script:Main Hall.0}
+on click do
+  go["Check Bathroom - Main Hall"]
+end
+{end}
+
+{script:Main Hall.1}
+on click do
+  go["Check Closet - Main Hall"]
+end
+{end}
+
+{script:Main Hall.2}
 on click do
   go["Lounge"]
 end
 {end}
 
-{card:Hallway - Main Level}
-{widgets}
-Room Description:{"type":"field","size":[384,64],"pos":[64,64]}
-Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Hallway"}
+{script:Main Hall.3}
+on click do
+  go["Hallway - Main Level"]
+end
+{end}
 
-{card:Check Closet}
+{card:Check Closet - Main Hall}
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You open the closet door. You are met with many jackets. There are jackets of different sizes and styles. You can hardly see anything.\n\nYou reach into the closet. You can see or feel anything. You frown and whisper Lam-Lam's name. He can't be here. Guess you should check elsewhere."}
 Back to Main Hall:{"type":"button","size":[96,32],"pos":[384,288],"script":"Hallway - Second Level.0","text":"Keep Searching"}
 
-{card:Check Bathroom}
+{card:Check Bathroom - Main Hall}
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You walk into the bathroom. It is very clean. This one is used often. Especially if there are people over. You look around and can't even find a sinlge toy.\n\nNo Lam-Lam."}
 Back to Main Hall:{"type":"button","size":[96,32],"pos":[384,288],"script":"Hallway - Second Level.0","text":"Keep Searching"}
@@ -302,24 +315,100 @@ end
 {card:Check Couch - Lounge}
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You walk over to the couch. Now that you are closer, there are quite a few stains on the couch. Gross.\n\nGood thing Lam-Lam didn't choose to hide here."}
-Back to Lounge:{"type":"button","size":[96,32],"pos":[384,288],"script":"Main Hall.0","text":"Keep Searching"}
+Back to Lounge:{"type":"button","size":[96,32],"pos":[384,288],"script":"Main Hall.2","text":"Keep Searching"}
 
 {card:Check Cabinet - Lounge}
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You open the cabinet. There are many shiny glass bottles of all different shapes and sizes. You better not touch or your parents will be mad. \n\nYou don't think Lam-Lam would like theses drinks. Lam-Lam likes milk and honey."}
-Back to Lounge:{"type":"button","size":[96,32],"pos":[384,288],"script":"Main Hall.0","text":"Keep Searching"}
+Back to Lounge:{"type":"button","size":[96,32],"pos":[384,288],"script":"Main Hall.2","text":"Keep Searching"}
 
 {card:Check Fire Place - Lounge}
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"Like the fire place in the study upstairs, this fire place is a giant. You notice that a few logs in the fireplace are still glowing. Its really pretty.\n\nYou stare off watching the embers before you remember that Lam-Lam is not here and you still need to find him. It would be nicer to watch the fire with him."}
-Back to Lounge:{"type":"button","size":[96,32],"pos":[384,288],"script":"Main Hall.0","text":"Keep Searching"}
+Back to Lounge:{"type":"button","size":[96,32],"pos":[384,288],"script":"Main Hall.2","text":"Keep Searching"}
 
 {card:Library}
 {widgets}
-Room Description:{"type":"field","size":[384,64],"pos":[64,64]}
+Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"You step into the library. This is one of the biggest rooms. Is it filled with bookshelves, tables, and some chairs. There are books scattered about the tables. Some are stacked high with papers by them. The shelves are mostly full with the occational gaps. There is a latter to help you reach the hgih up books. There is a window seat at the far end of the room with a nice little study area."}
 Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Library"}
+Check Couch - Library:{"type":"button","size":[96,32],"pos":[288,160],"script":"Library.0","text":"Couch"}
+Enter Main Hall:{"type":"button","size":[96,32],"pos":[128,160],"text":"Main Hall"}
+Check Shelves 4 - Library:{"type":"button","size":[96,32],"pos":[288,288],"script":"Library.1","text":"More Shelves"}
+Check Shelves 1 - Library:{"type":"button","size":[96,32],"pos":[128,224],"script":"Library.2","text":"Shelves"}
+Check Shelves 3 - Library:{"type":"button","size":[96,32],"pos":[128,288],"script":"Library.3","text":"Some Shelves"}
+Check Shelves 2- Library:{"type":"button","size":[96,32],"pos":[288,224],"script":"Library.4","text":"Few  Shelves"}
+
+{script:Library.0}
+on click do
+  go["Check Couch - Library"]
+end
+{end}
+
+{script:Library.1}
+on click do
+  go["Check Shelves 4 - Library"]
+end
+{end}
+
+{script:Library.2}
+on click do
+  go["Check Shelves 1 - Library"]
+end
+{end}
+
+{script:Library.3}
+on click do
+  go["Check Shelves 3 - Library"]
+end
+{end}
+
+{script:Library.4}
+on click do
+  go["Check Shelves 2 - Library"]
+end
+{end}
+
+{card:Check Couch - Library}
+{widgets}
+Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You wander over to the couch. You sit and watch the rain for a while. There is a book next to you. The book is all about sheep and goats. You pick it up and sniffle. You are really starting to miss Lam-Lam.\n\nBetter get back to searhing. Then you can read the book together."}
+Back to Library:{"type":"button","size":[96,32],"pos":[384,288],"script":"Check Couch - Library.0","text":"Keep Searching"}
+
+{script:Check Couch - Library.0}
+on click do
+  go["Library"]
+end
+{end}
+
+{card:Check Shelves 1 - Library}
+{widgets}
+Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You decide to check the first set of book shelves.\n\nThere are many books on the shelve. You look up and down the shelves. \n\nNo Lam-Lam."}
+Back to Library:{"type":"button","size":[96,32],"pos":[384,288],"script":"Check Couch - Library.0","text":"Keep Searching"}
+
+{card:Check Shelves 2 - Library}
+{widgets}
+Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You decide to investigate another set of book shelves. \n\nTo your amazement, there are more books.\n\nShockingly, no Lam-Lam."}
+Back to Library:{"type":"button","size":[96,32],"pos":[384,288],"script":"Check Couch - Library.0","text":"Keep Searching"}
+
+{card:Check Shelves 3 - Library}
+{widgets}
+Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You check more books.\n\nYou are starting to feel that it is pointless to check the book shelves.\n\nLam-Lam doesn't really like reading alone anyways."}
+Back to Library:{"type":"button","size":[96,32],"pos":[384,288],"script":"Check Couch - Library.0","text":"Keep Searching"}
+
+{card:Check Shelves 4 - Library}
+{widgets}
+Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You check the last set of book shelves.\n\nYou see something in a gap of books! Could it be?\n\nYou grab the object and pull it out. It's a pair of socks... How did that get there? You sniffle a little. "}
+Back to Library:{"type":"button","size":[96,32],"pos":[384,288],"script":"Check Couch - Library.0","text":"Keep Searching"}
 
 {card:card1}
+
+{card:Hallway - Main Level}
+{widgets}
+Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"You walk into the narrow hall. This hall lead to the living room/dining room, kitchen, and the flower room.\n\nWhere could Lam-Lam be?"}
+Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Hallway"}
+Enter Main Hall:{"type":"button","size":[96,32],"pos":[128,160],"script":"Hallway - Second Level.0","text":"Main Hall"}
+Enter Flower Room:{"type":"button","size":[96,32],"pos":[288,224],"text":"Flower Room"}
+Enter Living Room:{"type":"button","size":[96,32],"pos":[288,160],"text":"Living Room"}
+Enter Kitchen:{"type":"button","size":[96,32],"pos":[128,224],"text":"Kitchen"}
 
 </script>
 <a id='target' style='display:none'></a>
