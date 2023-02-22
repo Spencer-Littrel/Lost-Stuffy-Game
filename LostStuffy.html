@@ -1,67 +1,78 @@
 <body><script language="decker">
 {deck}
 version:1
-card:11
+card:0
 size:[512,342]
 name:"LostStuffy.html"
+
+{card:Title}
+{widgets}
+Title:{"type":"field","size":[192,32],"pos":[160,96],"align":"center","value":"The Lost Stuffy"}
+Start Game:{"type":"button","size":[64,32],"pos":[224,160],"script":"Title.0","text":"Start"}
+
+{script:Title.0}
+on click do
+  go["Intro"]
+end
+{end}
 
 {card:Intro}
 image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8Arg=="
 {widgets}
-field1:{"type":"field","size":[384,64],"pos":[64,64],"value":"You awake with a start. You look around. The room is dark. You hear the rain tapping at the window rhythmically. Your heart beats quickly from the nightmare you woke from. \n\nYou check next to you. To your surprise, your favorite stuffy Lam-Lam is not there. Where could he be? You can't possibly sleep without him."}
+Intro:{"type":"field","size":[384,64],"pos":[64,64],"value":"You awake with a start. You look around. The room is dark. You hear the rain tapping at the window rhythmically. Your heart beats quickly from the nightmare you woke from. \n\nYou check next to you. To your surprise, your favorite stuffy Lam-Lam is not there. Where could he be? You can't possibly sleep without him."}
 Find Lam-Lam:{"type":"button","size":[96,32],"pos":[384,288],"script":"Intro.0","text":"Find Lam-Lam"}
 
 {script:Intro.0}
 on click do
-  go["Kid Room"]
+  go["Your Room"]
 end
 {end}
 
-{card:Kid Room}
+{card:Your Room}
 image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8Arg=="
 {widgets}
-Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"You look around the room. You are in a good sized bedroom. There are two kid sided beds. There are two dressers, a small couch and some scattered toys you were playing with.\n\nYou can see a door that leads to the hallway and a door that leads into the room next to yours, the game room."}
-Check Bed:{"type":"button","size":[94,31],"pos":[128,160],"script":"Kid Room.0","text":"Bed"}
-Check Dresser:{"type":"button","size":[96,32],"pos":[288,160],"script":"Kid Room.1","text":"Dresser"}
-Enter Game Room:{"type":"button","size":[96,32],"pos":[128,224],"script":"Kid Room.2","text":"Game Room"}
-Enter Hallway:{"type":"button","size":[96,32],"pos":[288,224],"script":"Kid Room.3","text":"Hallway"}
-Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Kid Room"}
+Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"You look around your room. You live in a good sized bedroom. There are toys scattered about the room. You better remember to clean those in the morning.\n\nYou can see a door that leads to the hallway and a door that leads into the room next to yours, the game room."}
+Check Bed:{"type":"button","size":[94,31],"pos":[128,160],"script":"Your Room.0","text":"Bed"}
+Check Dresser:{"type":"button","size":[96,32],"pos":[288,160],"script":"Your Room.1","text":"Dresser"}
+Enter Game Room:{"type":"button","size":[96,32],"pos":[128,224],"script":"Your Room.2","text":"Game Room"}
+Enter Hallway:{"type":"button","size":[96,32],"pos":[288,224],"script":"Your Room.3","text":"Hallway"}
+Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Your Room"}
 
-{script:Kid Room.0}
+{script:Your Room.0}
 on click do
-  go["Check Bed - Kid Room"]
+  go["Check Bed - Your Room"]
 end
 {end}
 
-{script:Kid Room.1}
+{script:Your Room.1}
 on click do
-  go["Check Dresser - Kid Room"]
+  go["Check Dresser -Your Room"]
 end
 {end}
 
-{script:Kid Room.2}
+{script:Your Room.2}
 on click do
   go["Game Room"]
 end
 {end}
 
-{script:Kid Room.3}
+{script:Your Room.3}
 on click do
   go["Hallway - Second Level"]
 end
 {end}
 
-{card:Check Bed - Kid Room}
+{card:Check Bed - Your Room}
 image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8Arg=="
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You look through the covers of the bed you were sleeping in. \n\nUnfortunately, Lam-Lam is nowhere to be found."}
-Keep Searching:{"type":"button","size":[96,32],"pos":[384,288],"script":"Intro.0","text":"Keep Searching"}
+Go to Your Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Intro.0","text":"Keep Searching"}
 
-{card:Check Dresser - Kid Room}
+{card:Check Dresser -Your Room}
 image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8Arg=="
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You walk over the to the dresser. Looking around it. You search each drawer.\n\n Nothing.\n\nYou do find a small metal key. You're not sure what it goes to."}
-Keep Searching:{"type":"button","size":[96,32],"pos":[384,288],"script":"Intro.0","text":"Keep Searching"}
+Go to Your Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Intro.0","text":"Keep Searching"}
 
 {card:Game Room}
 image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8Arg=="
@@ -70,7 +81,7 @@ Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"The game
 Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Game Room"}
 Check Table:{"type":"button","size":[96,32],"pos":[128,160],"script":"Game Room.0","text":"Table"}
 Check Shelves:{"type":"button","size":[96,32],"pos":[288,160],"script":"Game Room.1","text":"Shelves"}
-Enter Kid Room:{"type":"button","size":[96,32],"pos":[128,224],"script":"Intro.0","text":"Kid Room"}
+Enter Your Room:{"type":"button","size":[96,32],"pos":[128,224],"script":"Intro.0","text":"Your Room"}
 
 {script:Game Room.0}
 on click do
@@ -88,20 +99,20 @@ end
 image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8Arg=="
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You check the table. You see a map. The corner has a name scribbled. \"Tom Cartos\". There are little pieces on the map and sheets of paper everywhere. \n\nSadly, no Lam-Lam."}
-Back to Game Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Kid Room.2","text":"Keep Searching"}
+Back to Game Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Your Room.2","text":"Keep Searching"}
 
 {card:Check Shelves - Game Room}
 image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8Arg=="
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"The shelves are cluttered with pieces of board games, books, and boxes. You search through the clutter. \n\nYou don't find Lam-Lam but you find a toy sword. Now you feel a little safer."}
-Back to Game Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Kid Room.2","text":"Keep Searching"}
+Back to Game Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Your Room.2","text":"Keep Searching"}
 
 {card:Hallway - Second Level}
 image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8Arg=="
 {widgets}
 Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"You enter the hall. You quickly remember you are on the second floor. The hall wraps around the second floor. There is a opening in the middle of the room to show the main level. You can go to many different rooms from here."}
 Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Hallway"}
-Enter Kid Room:{"type":"button","size":[96,32],"pos":[128,160],"script":"Intro.0","text":"Kid Room"}
+Enter Your Room:{"type":"button","size":[96,32],"pos":[128,160],"script":"Intro.0","text":"Your Room"}
 Go to Main Level:{"type":"button","size":[96,32],"pos":[288,288],"script":"Hallway - Second Level.0","text":"Down Stairs"}
 Enter Guest Hall:{"type":"button","size":[96,32],"pos":[288,160],"script":"Hallway - Second Level.1","text":"Guest Hall"}
 Enter Parents Room:{"type":"button","size":[96,32],"pos":[128,224],"script":"Hallway - Second Level.2","text":"Parents Room"}
@@ -143,7 +154,7 @@ image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8
 {widgets}
 Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"You enter a huge room. There are paintings, tables, and chairs all over. This is the place where a lot of parties are held. You aren't in here very often but it doesn't hurt to look around. \n\nThere is a door to the Study from here. You play in there sometimes."}
 Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Guest Hall"}
-Enter Hallway:{"type":"button","size":[96,32],"pos":[128,160],"script":"Kid Room.3","text":"Hallway"}
+Enter Hallway:{"type":"button","size":[96,32],"pos":[128,160],"script":"Your Room.3","text":"Hallway"}
 Enter Study:{"type":"button","size":[96,32],"pos":[288,160],"script":"Guest Hall.0","text":"Study"}
 
 {script:Guest Hall.0}
@@ -157,21 +168,80 @@ image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8
 {widgets}
 Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"You try to open the door to your parents room. The handle seems to be a little stuck. That happens sometimes. You remember your parents telling you to use a paper clip. Something about the door being old and locking randomly. \n\nGuess you need a paper clip to go in."}
 Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Parents Room"}
-Enter Hallway:{"type":"button","size":[96,32],"pos":[128,160],"script":"Kid Room.3","text":"Hallway"}
+Enter Hallway:{"type":"button","size":[96,32],"pos":[128,160],"script":"Your Room.3","text":"Hallway"}
 
 {card:Parents Room - Unlocked}
 {widgets}
 Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"Using the paper clip. You unlock the door to your parents room.\n\nYou sneak in. You can hear the heavy breathing of your parents. Better look quick. Don't want to wake them up."}
 Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Parents Room"}
-Enter Hallway:{"type":"button","size":[96,32],"pos":[128,160],"script":"Kid Room.3","text":"Hallway"}
-Check Office - Parents Room:{"type":"button","size":[96,32],"pos":[288,160],"text":"Office"}
-Check Bed -  Parents Room:{"type":"button","size":[96,32],"pos":[128,224],"text":"Bed"}
- Check Bathroom - Parents Room:{"type":"button","size":[96,32],"pos":[288,224],"text":"Bathroom"}
+Enter Hallway:{"type":"button","size":[96,32],"pos":[128,160],"script":"Your Room.3","text":"Hallway"}
+Check Office - Parents Room:{"type":"button","size":[96,32],"pos":[288,160],"script":"Parents Room - Unlocked.0","text":"Office"}
+Check Bed -  Parents Room:{"type":"button","size":[96,32],"pos":[128,224],"script":"Parents Room - Unlocked.1","text":"Bed"}
+ Check Bathroom - Parents Room:{"type":"button","size":[96,32],"pos":[288,224],"script":"Parents Room - Unlocked.2","text":"Bathroom"}
 
-{card:card2}
+{script:Parents Room - Unlocked.0}
+on click do
+  go["Check Office - Parents Room"]
+end
+{end}
+
+{script:Parents Room - Unlocked.1}
+on click do
+  go["Check Bed - Parents Room"]
+end
+{end}
+
+{script:Parents Room - Unlocked.2}
+on click do
+  go["Check Bathroom - Parents Room"]
+end
+{end}
+
+{card:Check Office - Parents Room}
 {widgets}
-Check:{"type":"field","size":[384,64],"pos":[64,64]}
-Back to :{"type":"button","size":[96,32],"pos":[384,288],"script":"Kid Room.2","text":"Keep Searching"}
+Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"There is a good sized desk and chair at the other end of the room. This is where your parents stay up late to do work. \n\nYou use the chair to look up on the desk. There is paper scattered all over the table. There is a pen just in reach. You grab the pen and draw a heart. Well, you try to but it turns out to look more like a blob. Better find Lam-Lam so you can practice more."}
+Back to Parents Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Check Office - Parents Room.0","text":"Keep Searching"}
+
+{script:Check Office - Parents Room.0}
+on click do
+  go["Parents Room - Unlocked"]
+end
+{end}
+
+{card:Check Bed - Parents Room}
+{widgets}
+Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You walk to the edge of the bed. You peak over the bed. You can hear the heavy breathing of your parents. \n\nIt probably isn't a good place to check. You wouldn't want to wake up your parents at this time of night. Better search elsewhere."}
+Back to Parents Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Check Office - Parents Room.0","text":"Keep Searching"}
+
+{card:Check Bathroom - Parents Room}
+{widgets}
+Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"Your parents have a very nice tile bathroom. You step in and look around. Next to the sink you see a grumpled piece of paper.\n\nYou look around a bit more. You check in the bath tub and in the toilet. No Lam-Lam."}
+Back to Parents Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Check Office - Parents Room.0","text":"Keep Searching"}
+Check Odd Note 2 - Parents Room:{"type":"button","size":[96,32],"pos":[128,160],"script":"Check Bathroom - Parents Room.0","text":"Odd Note"}
+
+{script:Check Bathroom - Parents Room.0}
+on click do
+  go["Check Odd Note 2 -  Parents Room"]
+end
+{end}
+
+{card:Check Odd Note 2 -  Parents Room}
+{widgets}
+Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You grab the odd piece of paper and take a closer look at it. \n\nIt reads: \" h c    in i g\"\n\nStrange. What could it mean?"}
+Back to Parents Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Check Odd Note 2 -  Parents Room.0","text":"Keep Searching"}
+Check Notes:{"type":"button","size":[96,32],"pos":[128,160],"script":"Check Odd Note 2 -  Parents Room.1","text":"Compare Notes"}
+
+{script:Check Odd Note 2 -  Parents Room.0}
+on click do
+  go["Flower Room"]
+end
+{end}
+
+{script:Check Odd Note 2 -  Parents Room.1}
+on click do
+  go["Comparing Notes"]
+end
+{end}
 
 {card:Guest Bedroom}
 image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8Arg=="
@@ -179,7 +249,7 @@ image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8
 Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"This room doesn't get used very often. The room smells stale. Dust clings to everything. There is a balcony attach to this room that you like to play on. There are a few places Lam-Lam could be hiding."}
 Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Guest Bedroom"}
 Check Bathroom:{"type":"button","size":[96,32],"pos":[128,224],"script":"Guest Bedroom.0","text":"Bathroom"}
-Enter Hallway:{"type":"button","size":[96,32],"pos":[128,160],"script":"Kid Room.3","text":"Hallway"}
+Enter Hallway:{"type":"button","size":[96,32],"pos":[128,160],"script":"Your Room.3","text":"Hallway"}
 Check Balcony:{"type":"button","size":[96,32],"pos":[288,224],"script":"Guest Bedroom.1","text":"Balcony"}
 Check Bed:{"type":"button","size":[96,32],"pos":[288,160],"script":"Guest Bedroom.2","text":"Bed"}
 
@@ -224,7 +294,7 @@ image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8
 {widgets}
 Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"It is raining pretty hard right now. You probably shouldn't go outside. You might chat a cold. Lam-Lam would never go outside in this weather.\n\nBetter check somewhere else."}
 Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Balcony"}
-Enter Hallway:{"type":"button","size":[96,32],"pos":[128,160],"script":"Kid Room.3","text":"Hallway"}
+Enter Hallway:{"type":"button","size":[96,32],"pos":[128,160],"script":"Your Room.3","text":"Hallway"}
 
 {card:Study}
 image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8Arg=="
@@ -277,7 +347,7 @@ image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8
 {widgets}
 Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"You carfully walk down the stairs into the Main Hall. You cling to the railing as you take small steps. The Main Hall is very big. You hear the echo of the rain pattering on the windows. There is a lonely chair and table in the room. In the middle of the stairs hangs a large painting of a man with a monicle. It always feels like he is watching you.\n\nThere are many room on the main floor. Which one should you go to?"}
 Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Main Hall"}
-Go to Second Level:{"type":"button","size":[96,32],"pos":[128,160],"script":"Kid Room.3","text":"Up Stairs"}
+Go to Second Level:{"type":"button","size":[96,32],"pos":[128,160],"script":"Your Room.3","text":"Up Stairs"}
 Check Bathroom - Main Hall:{"type":"button","size":[96,32],"pos":[288,224],"script":"Main Hall.0","text":"Bathroom"}
 Check Closet - Main Hall:{"type":"button","size":[96,32],"pos":[128,224],"script":"Main Hall.1","text":"Closet"}
 Enter Lounge:{"type":"button","size":[96,32],"pos":[128,288],"script":"Main Hall.2","text":"Lounge"}
@@ -450,23 +520,17 @@ image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8
 Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"You walk into the narrow hall. This hall lead to the living room/dining room, kitchen, and the flower room.\n\nWhere could Lam-Lam be?"}
 Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Hallway"}
 Enter Main Hall:{"type":"button","size":[96,32],"pos":[128,160],"script":"Hallway - Second Level.0","text":"Main Hall"}
-Enter Flower Room:{"type":"button","size":[96,32],"pos":[288,224],"script":"Hallway - Main Level.0","text":"Flower Room"}
-Enter Living Room:{"type":"button","size":[96,32],"pos":[288,160],"script":"Hallway - Main Level.1","text":"Living Room"}
-Enter Kitchen:{"type":"button","size":[96,32],"pos":[128,224],"script":"Hallway - Main Level.2","text":"Kitchen"}
+Enter Flower Room:{"type":"button","size":[96,32],"pos":[288,224],"script":"Check Odd Note 2 -  Parents Room.0","text":"Flower Room"}
+Enter Living Room:{"type":"button","size":[96,32],"pos":[288,160],"script":"Hallway - Main Level.0","text":"Living Room"}
+Enter Kitchen:{"type":"button","size":[96,32],"pos":[128,224],"script":"Hallway - Main Level.1","text":"Kitchen"}
 
 {script:Hallway - Main Level.0}
-on click do
-  go["Flower Room"]
-end
-{end}
-
-{script:Hallway - Main Level.1}
 on click do
   go["Living Room"]
 end
 {end}
 
-{script:Hallway - Main Level.2}
+{script:Hallway - Main Level.1}
 on click do
   go["Kitchen"]
 end
@@ -503,18 +567,18 @@ end
 {card:Check Piano - Living Room}
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You walk over to the piano. It seems a lot bigger in the dark. You climb onto the stool. You place your small hands on the keys. You want to learn someday but your hands are just a little small. \n\nYou don't really ever see your parents play. Why is it here? Oh and Lam-Lam isn't here. Maybe he would like to learn to play too."}
-Back to Living Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Hallway - Main Level.1","text":"Keep Searching"}
+Back to Living Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Hallway - Main Level.0","text":"Keep Searching"}
 
 {card:Check Cabinet - Living Room}
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You creak open the cabinet. This is where all the movie are! You love movies. Especially the funny cartoon ones. You look around the cabinet. \n\nNothing. Just movies. Maybe you can watch one in the morning."}
-Back to Living Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Hallway - Main Level.1","text":"Keep Searching"}
+Back to Living Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Hallway - Main Level.0","text":"Keep Searching"}
 
 {card:Dining Room}
 {widgets}
 Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"You wander over to the Dining Room. It is a round room with many windows. There is a large rectangle table with chairs around it. There are a few dishes that got left behind.\n\nYou can see the rain coating the windows."}
 Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Dining Room"}
-Enter Living Room:{"type":"button","size":[96,32],"pos":[128,160],"script":"Hallway - Main Level.1","text":"Living Room"}
+Enter Living Room:{"type":"button","size":[96,32],"pos":[128,160],"script":"Hallway - Main Level.0","text":"Living Room"}
 Check Window - Dining Room:{"type":"button","size":[96,32],"pos":[288,160],"script":"Dining Room.0","text":"Window"}
 Check Table - Dining Room:{"type":"button","size":[96,32],"pos":[128,224],"script":"Dining Room.1","text":"Table"}
 
@@ -539,13 +603,7 @@ Back to Dining Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Li
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You look at the table. Looks like your parents didn't clean up dinner. \n\nThere is a cookie left on the table. You lean on the table and grab the cookie. Better not tell anyone. You nipple on the cookie and spot a small metal object.\n\nYou found a paper clip."}
 Back to Dining Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Living Room.1","text":"Keep Searching"}
-Enter Parents Room - Unlocked:{"type":"button","size":[96,32],"pos":[128,160],"script":"Check Table - Dining Room.0","text":"Use Paper Clip"}
-
-{script:Check Table - Dining Room.0}
-on click do
-  go["Parents Room - Unlocked"]
-end
-{end}
+Enter Parents Room - Unlocked:{"type":"button","size":[96,32],"pos":[128,160],"script":"Check Office - Parents Room.0","text":"Use Paper Clip"}
 
 {card:Kitchen}
 image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8Arg=="
@@ -578,18 +636,18 @@ end
 {card:Check Oven - Kitchen}
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You stand on your tippy toes to see if Lam-Lam is making a midnight snack. Your eyes peak over the top of the oven. \n\nSadly, all you can see are some pots. No Lam-Lam."}
-Back to Kitchen:{"type":"button","size":[96,32],"pos":[384,288],"script":"Hallway - Main Level.2","text":"Keep Searching"}
+Back to Kitchen:{"type":"button","size":[96,32],"pos":[384,288],"script":"Hallway - Main Level.1","text":"Keep Searching"}
 
 {card:Check Fridge - Kitchen}
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You open the fridge and shut your eyes tight as the light shines in your eyes. You shake your head as you try and adjust to being blinded.\n\nAs your eyes adjust, you look into the fridge. You see something behind the milk. You push it aside to see an odd shaped wrapper. It almost looked like Lam-Lam."}
-Back to Kitchen:{"type":"button","size":[96,32],"pos":[384,288],"script":"Hallway - Main Level.2","text":"Keep Searching"}
+Back to Kitchen:{"type":"button","size":[96,32],"pos":[384,288],"script":"Hallway - Main Level.1","text":"Keep Searching"}
 
 {card:Pantry}
 {widgets}
 Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"You grab the handle to the pantry. You aren't allowed to go in here.\n\nMaybe you should check somewhere else."}
 Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Pantry"}
-Enter Kitchen:{"type":"button","size":[96,32],"pos":[128,160],"script":"Hallway - Main Level.2","text":"Kitchen"}
+Enter Kitchen:{"type":"button","size":[96,32],"pos":[128,160],"script":"Hallway - Main Level.1","text":"Kitchen"}
 
 {card:Flower Room}
 image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8Arg=="
@@ -622,20 +680,88 @@ end
 {card:Check Flowers - Flower Room}
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You walk over to the flower and lean down. You smell the flowers. \n\nThey smell really nice. You close your eyes and enjoy the scent of the flowers. You open your eyes and remember that it is the middle of the night and you are on a mission. \n\nBetter get back to finding Lam-Lam."}
-Back to Flower Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Hallway - Main Level.0","text":"Keep Searching"}
+Back to Flower Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Check Odd Note 2 -  Parents Room.0","text":"Keep Searching"}
 
 {card:Check Bench - Flower Room}
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You check your favorite bench. There is a drawing and some crayons on the bench. You pick up the drawing. It is a drawing of your and your parents and Lam-Lam.\n\nYou really miss Lam-Lam.\n\nYou look under the bench. Nothing."}
-Back to Flower Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Hallway - Main Level.0","text":"Keep Searching"}
+Back to Flower Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Check Odd Note 2 -  Parents Room.0","text":"Keep Searching"}
 
 {card:Check Odd Note 1 - Flower Room}
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You notice a note on the ground. You walk over to it and pick it up. You may note be the best reader but it seems incomplete.\n\nIt reads: \"c e  k  pa  t  n \"\n\nStrange. What could it mean?"}
-Back to Flower Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Hallway - Main Level.0","text":"Keep Searching"}
+Back to Flower Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Check Odd Note 2 -  Parents Room.0","text":"Keep Searching"}
 
-{card:card1}
+{card:Comparing Notes}
 image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8Arg=="
+{widgets}
+Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You place the two notes side by side. They seem to complete each other. You look at the letter carefully.\n\n\"Check painting\"\n\nOr maybe it's \"cekpatn hcinig\". That doesn't make any sense."}
+Check Painting - Main Level:{"type":"button","size":[96,32],"pos":[384,288],"script":"Comparing Notes.0","text":"Check Painting"}
+
+{script:Comparing Notes.0}
+on click do
+  go["Check Painting - Main Hall"]
+end
+{end}
+
+{card:Check Painting - Main Hall}
+{widgets}
+Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You go back to the Main Hall. You walk over to the painting in between the stairs. Lam-Lam isn't here.\n\nYou look closer at the side of the painting and see that it is leaning away from the wall slightly. You might be able to pull it open."}
+Enter Secret Hall - Painting:{"type":"button","size":[96,32],"pos":[128,160],"script":"Check Painting - Main Hall.0","text":"Inspect"}
+Go back to Bed - End:{"type":"button","size":[96,32],"pos":[288,160],"script":"Check Painting - Main Hall.1","text":"Back to Bed"}
+
+{script:Check Painting - Main Hall.0}
+on click do
+  go["Secret Hall"]
+end
+{end}
+
+{script:Check Painting - Main Hall.1}
+on click do
+  go["An Ending"]
+end
+{end}
+
+{card:Secret Hall}
+{widgets}
+Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"You grab the side of the pianting and pull. It creaks slowly and swings open like a door. The air smells dusty and you sneeze.\n\nYou peak inside. It seems to be a secret hallway to somewhere."}
+Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Secret Hall"}
+Enter Painting:{"type":"button","size":[96,32],"pos":[128,160],"script":"Comparing Notes.0","text":"Painting"}
+Enter Hidden Room:{"type":"button","size":[96,32],"pos":[288,160],"script":"Secret Hall.0","text":"Explore"}
+
+{script:Secret Hall.0}
+on click do
+  go["Secret Room - Secret Hall"]
+end
+{end}
+
+{card:Secret Room - Secret Hall}
+{widgets}
+Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"You walk down the hall a little. You come to a small door. It's perfect size for you. You grab the handle and push the door open. Inside is a small little table. \n\nLam-Lam! How did you get in here? You walk over to the little table that Lam-Lam is laying on. Underneath your stuffy is another odd note. \"Better not loose this. He is important.\" You look around confused. Guess you can go back to bed now."}
+Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Secret Room"}
+Head to Bed:{"type":"button","size":[96,32],"pos":[384,288],"script":"Secret Room - Secret Hall.0","text":"Head to Bed"}
+
+{script:Secret Room - Secret Hall.0}
+on click do
+  go["True Ending"]
+end
+{end}
+
+{card:True Ending}
+{widgets}
+An Ending:{"type":"field","size":[384,64],"pos":[64,64],"value":"You return to your room. Lam-Lam tight in your arms. You crawl into bed and cuddle Lam-Lam close. You smile as your best friend is safe and with you again.\n\nYou fall asleep easily knowing Lam-Lam is with you."}
+Restart:{"type":"button","size":[96,32],"pos":[384,288],"script":"True Ending.0","text":"End"}
+
+{script:True Ending.0}
+on click do
+  go["Title"]
+end
+{end}
+
+{card:An Ending}
+{widgets}
+An Ending:{"type":"field","size":[384,64],"pos":[64,64],"value":"You reach for the painting and decide that it isn't a good idea. Guess you can sleep without Lam-Lam this time. Better get back to bed now.\n\nYou crawl into bed and cuddle you blankets. You sniffle a little as you fall asleep, hoping you will be able to find lost stuffy in the morning."}
+Restart:{"type":"button","size":[96,32],"pos":[384,288],"script":"True Ending.0","text":"End"}
 
 </script>
 <a id='target' style='display:none'></a>
