@@ -169,6 +169,20 @@ image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8
 Room Description:{"type":"field","size":[384,64],"pos":[64,64],"value":"You try to open the door to your parents room. The handle seems to be a little stuck. That happens sometimes. You remember your parents telling you to use a paper clip. Something about the door being old and locking randomly. \n\nGuess you need a paper clip to go in."}
 Room Name:{"type":"field","size":[96,32],"pos":[64,32],"border":1,"align":"center","value":"Parents Room"}
 Enter Hallway:{"type":"button","size":[96,32],"pos":[128,160],"script":"Your Room.3","text":"Hallway"}
+Use paper clip:{"type":"button","size":[96,32],"pos":[288,160],"script":"Parents Room.0","text":"Unlock"}
+
+{script:Parents Room.0}
+on click do
+ c.inventory.items.paperclip
+ if c.value<1
+  alert["You do not have a paper clip"]
+ else
+  c.value:c.value-1
+  alert["You use the paperclip to unlock the door to your parents room"]
+  go["Parents Room - Unlocked"]
+  end
+end
+{end}
 
 {card:Parents Room - Unlocked}
 {widgets}
@@ -229,7 +243,8 @@ end
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You grab the odd piece of paper and take a closer look at it. \n\nIt reads: \" h c    in i g\"\n\nStrange. What could it mean?"}
 Back to Parents Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Check Odd Note 2 -  Parents Room.0","text":"Keep Searching"}
-Check Notes:{"type":"button","size":[96,32],"pos":[128,160],"script":"Check Odd Note 2 -  Parents Room.1","text":"Compare Notes"}
+Grab Odd Note:{"type":"button","size":[96,32],"pos":[128,160],"script":"Check Odd Note 2 -  Parents Room.1","text":"Grab"}
+Check Note Count:{"type":"button","size":[96,32],"pos":[288,160],"script":"Check Odd Note 2 -  Parents Room.2","text":"Compare Notes"}
 
 {script:Check Odd Note 2 -  Parents Room.0}
 on click do
@@ -239,7 +254,21 @@ end
 
 {script:Check Odd Note 2 -  Parents Room.1}
 on click do
-  go["Comparing Notes"]
+ n:inventory.items.notes
+ n.value+1
+ alert["You grab the Odd Note. It seems incomplete."]
+end
+{end}
+
+{script:Check Odd Note 2 -  Parents Room.2}
+on click do
+ n:inventory.items.notes
+ if n.value<2
+ alert["You seem to be missing something"]
+ else
+ n.value:n.value-2
+ go ["Comparing Notes"]
+ end
 end
 {end}
 
@@ -603,7 +632,15 @@ Back to Dining Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Li
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You look at the table. Looks like your parents didn't clean up dinner. \n\nThere is a cookie left on the table. You lean on the table and grab the cookie. Better not tell anyone. You nipple on the cookie and spot a small metal object.\n\nYou found a paper clip."}
 Back to Dining Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Living Room.1","text":"Keep Searching"}
-Enter Parents Room - Unlocked:{"type":"button","size":[96,32],"pos":[128,160],"script":"Check Office - Parents Room.0","text":"Use Paper Clip"}
+Add Paper Clip to inventory:{"type":"button","size":[96,32],"pos":[128,160],"script":"Check Table - Dining Room.0","text":"Grab"}
+
+{script:Check Table - Dining Room.0}
+on click do
+  c.inventory.items.paperclip
+  c.value+1
+  alert["You grab the paper clip"]
+end
+{end}
 
 {card:Kitchen}
 image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8Arg=="
@@ -691,6 +728,8 @@ Back to Flower Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Ch
 {widgets}
 Check:{"type":"field","size":[384,64],"pos":[64,64],"value":"You notice a note on the ground. You walk over to it and pick it up. You may note be the best reader but it seems incomplete.\n\nIt reads: \"c e  k  pa  t  n \"\n\nStrange. What could it mean?"}
 Back to Flower Room:{"type":"button","size":[96,32],"pos":[384,288],"script":"Check Odd Note 2 -  Parents Room.0","text":"Keep Searching"}
+Grab Odd Note:{"type":"button","size":[96,32],"pos":[128,160],"script":"Check Odd Note 2 -  Parents Room.1","text":"Grab"}
+Check Note Count:{"type":"button","size":[96,32],"pos":[288,160],"script":"Check Odd Note 2 -  Parents Room.2","text":"Compare Notes"}
 
 {card:Comparing Notes}
 image:"%%IMG2AgABVgD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8Arg=="
